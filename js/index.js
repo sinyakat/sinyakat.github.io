@@ -64,7 +64,7 @@ $(document).ready(function() {
       var user_tel = $(this).find('input[name=user-tel]').val();
 
       $.ajax({
-          url: "mail.php",
+          url: "../mail.php",
           type: "post",
           dataType: "json",
           data: {
@@ -85,7 +85,7 @@ $(document).ready(function() {
       var user_tel = $(this).find('input[name=user-tel]').val();
 
       $.ajax({
-          url: "mail.php",
+          url: "../mail.php",
           type: "post",
           dataType: "json",
           data: {
