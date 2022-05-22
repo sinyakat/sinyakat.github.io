@@ -1,31 +1,31 @@
 <?php
 
-$msg_box = ""; 
-$errors = array(); 
+    $msg_box = ""; 
+    $errors = array(); 
 
-// если форма без ошибок
-if(empty($errors)){     
+    // если форма без ошибок
+    if(empty($errors)){     
+        // создание сделки
+        $message = "Имя: " . $_POST['user-name'] . "<br>Телефон: " . $_POST['user-tel'];
+        send_mail($message);
+    }
+
     // создание сделки
-    $message = "Имя: " . $_POST['user-name'] . "<br>Телефон: " . $_POST['user-tel'];
-    send_mail($message);
-}
-    
-// создание сделки
-function send_mail($message){
-    // почта, на которую придет письмо
-    $mail_to = "timeloft39@inbox.ru";
+    function send_mail($message){
+        // почта, на которую придет письмо
+        $mail_to = "timeloft39@inbox.ru";
 
-    // тема письма
-    $subject = 'Заявка с сайта | TimeLoft';
-        
-    // заголовок письма
-    $headers= "MIME-Version: 1.0\r\n";
-    $headers .= "Content-type: text/html; charset=utf-8\r\n"; // кодировка письма
-    $headers .= "From: <timeloft39@inbox.ru>\r\n"; // от кого письмо
-        
-    // отправляем письмо 
-    mail($mail_to, $subject, $message, $headers);
-}
+        // тема письма
+        $subject = 'Заявка с сайта | TimeLoft';
+
+        // заголовок письма
+        $headers= "MIME-Version: 1.0\r\n";
+        $headers .= "Content-type: text/html; charset=utf-8\r\n"; // кодировка письма
+        $headers .= "From: <timeloft39@inbox.ru>\r\n"; // от кого письмо
+
+        // отправляем письмо 
+        mail($mail_to, $subject, $message, $headers);
+    }
     
 
 // Файлы phpmailer
@@ -98,7 +98,7 @@ function send_mail($message){
 // // Отображение результата
 // echo json_encode(["result" => $result, "resultfile" => $rfile, "status" => $status]);
 
-?> -->
+?> 
 
 <?php
 // формируем запись в таблицу google
