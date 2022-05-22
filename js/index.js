@@ -59,12 +59,13 @@ $(document).ready(function() {
     });    
 
     //SEND FORM
-    $('.popup-header-form').on('submit', function () {
+    $('.popup-header-form').on('submit', function (evt) {
+      evt.preventDefault();
       var user_name = $(this).find('input[name=user-name]').val();
       var user_tel = $(this).find('input[name=user-tel]').val();
 
       $.ajax({
-          url: "../mail.php",
+          url: "mail.php",
           type: "post",
           dataType: "json",
           data: {
@@ -80,12 +81,13 @@ $(document).ready(function() {
       return false;
     });
 
-    $('.header-bottom-wrap-offer-form').on('submit', function () {
+    $('.header-bottom-wrap-offer-form').on('submit', function (evt) {
+      evt.preventDefault();
       var user_name = $(this).find('input[name=user-name]').val();
       var user_tel = $(this).find('input[name=user-tel]').val();
 
       $.ajax({
-          url: "../mail.php",
+          url: "mail.php",
           type: "post",
           dataType: "json",
           data: {
