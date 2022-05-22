@@ -1,0 +1,1 @@
+# sinyakat.giyhub.io
