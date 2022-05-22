@@ -59,8 +59,8 @@ $(document).ready(function() {
     });    
 
     //SEND FORM
-    $('.popup-header-form').on('submit', function (evt) {
-      evt.preventDefault();
+    $('.popup-header-form').on('submit', function (event) {
+      event.preventDefault();
       var user_name = $(this).find('input[name=user-name]').val();
       var user_tel = $(this).find('input[name=user-tel]').val();
 
@@ -81,8 +81,8 @@ $(document).ready(function() {
       return false;
     });
 
-    $('.header-bottom-wrap-offer-form').on('submit', function (evt) {
-      evt.preventDefault();
+    $('.header-bottom-wrap-offer-form').on('submit', function (event) {
+      event.preventDefault();
       var user_name = $(this).find('input[name=user-name]').val();
       var user_tel = $(this).find('input[name=user-tel]').val();
 
