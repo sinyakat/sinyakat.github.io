@@ -1,1 +1,1 @@
-# sinyakat.giyhub.io
+# sinyakat.github.io
